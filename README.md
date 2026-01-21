@@ -26,3 +26,50 @@ You'll use the data from the STEDI Step Trainer and mobile app to develop a lake
   * AWS Glue
   * AWS Athena
   * AWS S3
+    
+## Data structure
+STEDI has three JSON data sources(opens in a new tab) to use from the Step Trainer. Check out the JSON data in the following folders in the Github repo:
+ * customer
+ * step_trainer
+ * accelerometer
+Here are the steps to download the data:
+
+1. Go to nd027-Data-Engineering-Data-Lakes-AWS-Exercises(opens in a new tab) repository and click on Download Zip.
+2. Extract the zip file.
+3. Navigate to the project/starter folder in the extracted output to find the JSON data files within three sub-folders. You should have
+ * 956 rows in the customer_landing table,
+ * 81273 rows in the accelerometer_landing table, and
+ * 28680 rows in the step_trainer_landing table.
+
+### Data preview
+1. Customer Records
+ * This is the data from fulfillment and the STEDI website.
+ * Data Download URL(opens in a new tab) - AWS S3 Bucket URI - s3://cd0030bucket/customers/ contains the following fields:
+   1. serialnumber
+   2. sharewithpublicasofdate
+   3. birthday
+   4. registrationdate
+   5. sharewithresearchasofdate
+   6. customername
+   7. email
+   8. lastupdatedate
+   9. phone
+   10. sharewithfriendsasofdate
+
+       
+2. Step Trainer Records
+ * This is the data from the motion sensor.
+ * Data Download URL(opens in a new tab) - AWS S3 Bucket URI - s3://cd0030bucket/step_trainer/  contains the following fields:
+   1. sensorReadingTime
+   2. serialNumber
+   3. distanceFromObject
+
+      
+3. Accelerometer Records
+ * This is the data from the mobile app.
+ * Data Download URL(opens in a new tab) - AWS S3 Bucket URI - s3://cd0030bucket/accelerometer/ contains the following fields:
+   1. timeStamp
+   2. user
+   3. x
+   4. y
+   5. z
